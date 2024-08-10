@@ -1,0 +1,66 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.game {
+  background-color: #1a1a1a;
+}
+
+.game__info {
+  padding: 30px 0;
+  font-size: 50px;
+  line-height: 1;
+  color: white;
+  text-align: center;
+}
+
+.game__reset {
+  padding: 30px 0;
+  text-align: center;
+}
+
+.game__btn-reset {
+  font-size: 40px;
+  background-color: #232323;
+  border: none;
+  font-family: "Indie Flower", cursive;
+  color: white;
+  padding: 10px 30px;
+  cursor: pointer;
+}
+
+
+.game__btn-reset:hover {
+  background-color: rgba(237, 237, 237, 0.1);
+  transition: all 0.2s ease-in-out;
+}
+
+.winners {
+  animation: winner 1s ease infinite;
+}
+
+@keyframes winner {
+  0%, 100%
+  {
+    text-shadow:
+      0 0 10px #ffffff,
+      0 0 20px #ffffff,
+      0 0 20px #ffffff,
+      0 0 20px #ffffff,
+      0 0 2px #ffffff,
+      2px 2px 2px #ffffff;
+    color: #ffffff;
+  }
+  50% {
+    text-shadow:
+      0 0 2px #9e9e9e,
+      0 0 5px #9e9e9e,
+      0 0 5px #9e9e9e,
+      0 0 5px #9e9e9e,
+      0 0 2px #9e9e9e,
+      0 0 2px #9e9e9e;
+  }
+}
