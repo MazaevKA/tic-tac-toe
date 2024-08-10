@@ -1,6 +1,7 @@
 import styles from "./Game.module.css";
 import {Field} from "./components/Field/Field";
 import {Information} from "./components/Information/Information";
+import PropTypes from "prop-types";
 
 export const GameLayout = (props) => {
 
@@ -17,6 +18,20 @@ export const GameLayout = (props) => {
     setWinArr,
     WIN_PATTERNS,
   } = props;
+
+  GameLayout.propTypes = {
+    currentPlayer: PropTypes.string,
+    setCurrentPlayer: PropTypes.func,
+    isGameEnded: PropTypes.bool,
+    setIsGameEnded: PropTypes.func,
+    isDraw: PropTypes.bool,
+    setIsDraw: PropTypes.func,
+    field: PropTypes.arrayOf(PropTypes.string),
+    setField: PropTypes.func,
+    winArr: PropTypes.arrayOf(PropTypes.number),
+    setWinArr: PropTypes.func,
+    WIN_PATTERNS: PropTypes.array,
+  };
 
   const onButtonReset = () => {
     setCurrentPlayer('X');

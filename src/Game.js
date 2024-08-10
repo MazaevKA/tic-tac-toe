@@ -21,20 +21,6 @@ export const Game = () => {
     [0, 4, 8], [2, 4, 6] // Варианты побед по диагонали
   ];
 
-  Game.propTypes = {
-    currentPlayer: PropTypes.string,
-    setCurrentPlayer: PropTypes.string,
-    isGameEnded: PropTypes.bool,
-    setIsGameEnded: PropTypes.bool,
-    isDraw: PropTypes.bool,
-    setIsDraw: PropTypes.bool,
-    winArr: PropTypes.arrayOf(PropTypes.string),
-    setWinArr: PropTypes.arrayOf(PropTypes.string),
-    field: PropTypes.arrayOf(PropTypes.string),
-    setField: PropTypes.arrayOf(PropTypes.string),
-    WIN_PATTERNS: PropTypes.arrayOf(PropTypes.string),
-  };
-
 	return <GameLayout
     currentPlayer={currentPlayer}
     setCurrentPlayer={setCurrentPlayer}
@@ -48,6 +34,4 @@ export const Game = () => {
     setWinArr={setWinArr}
     WIN_PATTERNS={WIN_PATTERNS}
   />
-
-
 };
